@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Opening Game...</title>
+    <script>
+        // Extract the ID from the URL path
+        var id = window.location.pathname.split('/').pop();
+        // Try to open your app with the ID
+        window.location.href = "banerbeu://challenge/" + id;
+        // Fallback: if app not installed, go to Play Store (optional)
+        setTimeout(function() {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.example.banerbeu";
+        }, 800);
+    </script>
+</head>
+<body>
+    <p>Opening game app...</p>
+    <p>If nothing happens, <a href="myapp://open?id=f24db00b...">click here</a> or install the app.</p>
+</body>
+</html>
